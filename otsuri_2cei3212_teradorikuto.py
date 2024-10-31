@@ -6,8 +6,11 @@ def buy(n, m, checkOneFiveYen):
     x -= eX
 
     print(f'投入金額 {n:.0f}円 商品金額 {x:.0f}円')
+    if not n % 10 == 0:
+        n = error(n, m, checkOneFiveYen)
+    else:
+        pass
 
-    n = error(n, m, checkOneFiveYen)
     return n, x
 
 # １円、５円投入エラー
